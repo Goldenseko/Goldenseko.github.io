@@ -1,1 +1,6 @@
-//this is a stylesheetpage
+.cat {
+  background: url(../images/whiteCat.jpg);
+  background-size: cover;
+  width: 1200px;
+  height: 1200px;
+}
