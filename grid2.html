@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+
+  /* コンテナ */
+  #container {
+    　display
+      grid-template-areas:
+      "areaA areaB"
+      "areaA areaC";
+  }
+
+  /* アイテム */
+  #itemA {
+      grid-area: areaA;
+      background: #f88;
+  }
+  #itemB {
+      grid-area: areaB;
+      background: #8f8;
+  }
+  #itemC {
+      grid-area: areaC;
+      background: #88f;
+  }
+  </style>
+</head>
+<body>
+  <div id="container"> <!-- コンテナ -->
+    <div id="itemA">A</div> <!-- アイテム -->
+    <div id="itemB">B</div> <!-- アイテム -->
+    <div id="itemC">C</div> <!-- アイテム -->
+
+  </div>
+</body>
+</html>
