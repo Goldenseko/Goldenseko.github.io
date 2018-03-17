@@ -8,73 +8,138 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
 
-  body {
-      margin: 0;
-  }
+*{
+  box-sizing: border-box;
+}
 
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 25%;
-      background-color: #f1f1f1;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-  }
+.row::after{
+  content:"";
+  clear:both;
+  display:block;
+}
 
-  li{
-      display: inline;
-  }
+[class*="col-"]{
+  float:left;
+  padding: 15px;
+}
 
-  li a {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-  }
+html{
+  font-family: "Lucida Sans", sans-serif;
+}
 
-  li a.active {
-      background-color: #4CAF50;
-      color: white;
-  }
+.header{
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
 
-  li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
-  }
+.menu ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li{
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+    background-color: #0099cc;
+}
+
+.aside{
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer{
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
   </style>
 </head>
 
 <body>
 
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#News">News</a></li>
-    <li><a href="＃Contact">Contact</a></li>
-    <li><a href="＃About">About</a></li>
-  </ul>
+<div class="header">
 
-  <p>Note: We use href="#" for test links. In a real web site this would be URLs.</p>
-
-  <h1>Hello Cat's</h1>
+  <h1>Hello Cat's Clothes</h1>
   <a href="2ndpage.html">Go to Second Page</a>
 
-  <div class="cat"></div>
+  <!-- <div class="cat"></div> -->
 
-  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h2>Fixed Full-height Side Nav</h2>
-  <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
-  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
-  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
 </div>
+
+<div class="row">
+
+  <div class="col-3 menu">
+  <ul>
+    <li>新着情報</li>
+    <li>プロジェクト</li>
+    <li>アイランド</li>
+    <li>会社概要</li>
+  </ul>
+</div>
+
+<div class="col-6">
+  <h1>シティータイプ</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="col-3 right">
+  <div class="aside">
+    <h2>何?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>どこできているの?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>どうやって?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+
+</div>
+
+<div class="footer">
+    <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+
+
+
 
 </body>
 </html>
